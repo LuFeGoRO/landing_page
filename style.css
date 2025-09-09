@@ -4,62 +4,142 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+body {
+    /*
+    porgo como fondo un color verde
+   margo el contenido al centro de la pagina
+    establesco el ancho de la pagina
+   establesco la altura de la pagina
+    */
     background-color: #1fa975;
-    max-width: 90vw;
-    max-height: 80vh;
+    max-width: 1200px;
+    max-height: 1000px;
     margin: 0 auto;
+   
 }
- main{
-    background-color: rgb(238 253 244);
-    width: 100%;
-    height: auto;
- }
- h2{
-    margin: 5%;
-    text-align: center;
-    color:  rgb(238 253 244);
- }
-
-.barra_superior{
+h2{
+    /*
+    uso display flex para centrar el contenido
+    establesco un espacio interno de 20 pixeles
+    pongo un fondo azul claro
+    establesco el ancho al 85%
+    y la altura al 100%
+    */
+    
+    margin: 10% auto;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: aliceblue;
+    left: 40%;
+     
+    position: fixed;
+}
+main{
+    /*
+    uso display flex para centrar el contenido
+    establesco un espacio interno de 20 pixeles
+    pongo un fondo azul claro
+    establesco el ancho al 85%
+    y la altura al 100%
+    */
+    margin: 15% auto;
     display: flex;
-    list-style: none;
-    margin: 0;
-    position: relative;
-    
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+   background-color: aliceblue;
+     width: 90%;
+    height: 50%;
+    position: fixed;
 }
-.barra_superior>li{
-    
-    color:#05514b ;
+.cabecera {
+    /*
+uso display flex para que el contenido salga un boton al lado del otro
+centro los botones
+pongo un espacio interno de 10 pixeles
+establezco el ancho al 90%
+y la altura al 100%
+    */
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+    height: 0;    
+    top: 0;
+    position: absolute;
+    right: 10%;
 }
-.barra_superior>li:nth-child(1){
-    margin-left: 7%;
+.cabecera>.barra_superior {
+    /*
+    establezco un margen a los lados de 10 pixeles
+    uso display flex para centrar el contenido
+    pongo un espacio interno de 10 pixeles
+    centro el contenido
+    */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.barra_superior>li:nth-child(2){
-    margin-left: 7%;
+.cabecera>.barra_superior>h3 {
+    /*
+    establezco un margen a los lados de 10 pixeles
+    uso display flex para centrar el contenido
+    pongo un espacio interno de 10 pixeles
+    centro el contenido
+    */
+    color: #01504d;
+    margin: 0 10px;
+    padding: 0 40px;
+    cursor: pointer;
+    margin-bottom: auto;
 }
-.barra_superior>li:nth-child(3){
-    margin-left: 7%;
-}
-.barra_superior>li:nth-child(4){
-    margin-left: 7%;
-}
-.barra_superior>li:nth-child(5){
-    margin-left: 7%;
-}
-.barra_superior>li:nth-child(6){
-    color:#1fa975;
-    margin-left: 5% ;
-}
-.barra_lateral{
+
+.barra_lateral {
+    /*establece el margen el modo oculto y
+     la poscicion de la barra lateral*/
     background-color: #01504d;
+    color: white;
+    position: absolute;
+    margin: 0;
+    right: 100%;
     width: 5%;
-    position: relative;
-    top: -66px;
-}
-.barra_lateral>h1:nth-child(2){
+    top: 0;
     
-    margin-top: 30px;
+    height: 100%;
+}
+
+.barra_lateral>ul{/*    
+    quito los puntos de la lista
+    quito el espacio interno    
+    quito el margen
+    */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.barra_lateral>ul>li{
+    padding: 5px 0;
+    color: #1fa975;
+    cursor: pointer;
+    text-align: center;
+    
+}
+.barra_lateral>ul>li:nth-child(2){
+    /*establezco un margen superior de 200 pixeles*/
+    margin-top: 150px;
+}
+.barra_lateral>ul>li:hover{
+  
+    padding: 10px;
+}
+
+
+.barra_superior>h3:hover{
+    background-color: #1fa975;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 
