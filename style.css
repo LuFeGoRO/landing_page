@@ -5,141 +5,66 @@
     box-sizing: border-box;
 }
 body {
-    /*
-    porgo como fondo un color verde
-   margo el contenido al centro de la pagina
-    establesco el ancho de la pagina
-   establesco la altura de la pagina
-    */
     background-color: #1fa975;
-    max-width: 1200px;
-    max-height: 1000px;
-    margin: 0 auto;
-   
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    
 }
 h2{
-    /*
-    uso display flex para centrar el contenido
-    establesco un espacio interno de 20 pixeles
-    pongo un fondo azul claro
-    establesco el ancho al 85%
-    y la altura al 100%
-    */
-    
-    margin: 10% auto;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    color: aliceblue;
-    left: 40%;
-     
-    position: fixed;
+  position: absolute;
+  margin: 0 auto;
+  top: 10%; 
+    color: #fff;
 }
 main{
-    /*
-    uso display flex para centrar el contenido
-    establesco un espacio interno de 20 pixeles
-    pongo un fondo azul claro
-    establesco el ancho al 85%
-    y la altura al 100%
-    */
-    margin: 15% auto;
+    background: #fff;
+    width: 90%;
+    max-width: 1100px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-   background-color: aliceblue;
-     width: 90%;
-    height: 50%;
-    position: fixed;
+    flex-direction: column;
 }
 .cabecera {
-    /*
-uso display flex para que el contenido salga un boton al lado del otro
-centro los botones
-pongo un espacio interno de 10 pixeles
-establezco el ancho al 90%
-y la altura al 100%
-    */
-    display: block;
-    margin: 0 auto;
-    padding: 0;
-    width: 90%;
-    height: 0;    
-    top: 0;
-    position: absolute;
-    right: 10%;
-}
-.cabecera>.barra_superior {
-    /*
-    establezco un margen a los lados de 10 pixeles
-    uso display flex para centrar el contenido
-    pongo un espacio interno de 10 pixeles
-    centro el contenido
-    */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 1rem 2rem;
+    background: #f6fdf9;
 }
-.cabecera>.barra_superior>h3 {
-    /*
-    establezco un margen a los lados de 10 pixeles
-    uso display flex para centrar el contenido
-    pongo un espacio interno de 10 pixeles
-    centro el contenido
-    */
+.barra_superior>ul{
     color: #01504d;
-    margin: 0 10px;
-    padding: 0 40px;
+    display: flex ;
+    gap: 1.5rem;
+    list-style: none;
+    left: 10px;
+}
+.barra_superior ul>li:hover{
+    color: #1fa975;
     cursor: pointer;
     margin-bottom: auto;
 }
 
 .barra_lateral {
-    /*establece el margen el modo oculto y
-     la poscicion de la barra lateral*/
-    background-color: #01504d;
-    color: white;
-    position: absolute;
-    margin: 0;
-    right: 100%;
-    width: 5%;
-    top: 0;
-    
-    height: 100%;
-}
-
-.barra_lateral>ul{/*    
-    quito los puntos de la lista
-    quito el espacio interno    
-    quito el margen
-    */
+    background:#01504d;
+     color: #d8e9e8;
+     width: 3%;
+    gap: 1.5rem;
     list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.barra_lateral>ul>li{
-    padding: 5px 0;
-    color: #1fa975;
-    cursor: pointer;
-    text-align: center;
+    position: absolute;
+    height: 32%;
     
-}
-.barra_lateral>ul>li:nth-child(2){
-    /*establezco un margen superior de 200 pixeles*/
-    margin-top: 150px;
-}
-.barra_lateral>ul>li:hover{
-  
-    padding: 10px;
-}
 
-
-.barra_superior>h3:hover{
-    background-color: #1fa975;
-    color: white;
-    border-radius: 10px;
-    padding: 5px;
+}
+.barra_lateral>ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
 }
 
 
