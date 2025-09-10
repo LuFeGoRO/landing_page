@@ -29,7 +29,7 @@ main{
     flex-direction: column;
 }
 .cabecera {
-    display: flex;
+    display: absolute;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
@@ -48,39 +48,32 @@ main{
     margin-bottom: auto;
 }
 
-.barra_lateral {
-    background:#01504d;
+.barra_lateral{
+    display:inline-block;
     color: #d8e9e8;
-    width: 3%;
-    gap: 1.5rem;
-    list-style: none;
+    display:flex;
+    flex-direction: column;
     position: absolute;
-    max-height: 520px;
-    height: 25%
+    width: 2%;
     
 
 }
 .barra_lateral>ul{
-    list-style: none;
-    display: flex;
+    background:#01504d;
+    display: flex ;
     flex-direction: column;
-    align-items: center;
-    padding: 1rem 0;
+    gap: 1.89rem;
+    list-style: none;
+    left: 10px;
+    padding: 0 0;
 }
-.barra_lateral>ul>li{
-    margin: 0;
+.barra_lateral ul>li:hover{
     color: #1fa975;
     cursor: pointer;
-    text-align: center;
-    
+    margin-bottom: auto;
 }
-.barra_lateral>ul>li:nth-child(2){
-    padding: 104px 0 0;
-}
-.barra_lateral>ul>li:hover{
-  
-    padding: 10px;
-}
+
+
 
 
 .barra_superior>h3:hover{
@@ -88,6 +81,9 @@ main{
     color: white;
     border-radius: 10px;
     
+}
+.cuerpo{
+    margin: 0 auto;
 }
 
 
