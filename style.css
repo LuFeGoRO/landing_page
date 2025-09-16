@@ -1,124 +1,193 @@
-* {
-    /*reseteo la pagina*/
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 body {
-    background-color: #1fa975;
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    min-height: 100vh;
-    
-    
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
-h2{
-  position: absolute;
+
+/* Layout */
+main {
+  margin-left: 70px;  
+  margin-top: 60px;   
+  padding: 20px;
+}
+
+.contenedor {
+  max-width: 1200px;
   margin: 0 auto;
-  top: 10%; 
-    color: #fff;
-}
-main{
-    background: #fff;
-    width: 90%;
-    max-width: 1100px;
-    border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.);
-    display: flex;
-    flex-direction: column;
-}
-.cabecera {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5rem;
-    background: #f6fdf9;
-}
-.barra_superior>ul{
-    color: #01504d;
-    display: flex ;
-    gap: 1.5rem;
-    list-style: none;
-    left: 10px;
-}
-.barra_superior ul>li:hover{
-    color: #1fa975;
-    cursor: pointer;
-    margin-bottom: auto;
+  margin-top: -30px;  
+  display: table;
+  table-layout: fixed; /* fuerza a que ambas columnas respeten su ancho */
 }
 
-.barra_lateral {
-    background:#01504d;
-    color: #d8e9e8;
-    width: 3%;
-    gap: 1.5rem;
-    list-style: none;
-    position: absolute;
-    max-height: 1000px;
-    height: 90%
-    
+.presentacion, .formulario {
+  display: table-cell;
+  vertical-align: middle;
+}
 
-}
-.barra_lateral>ul{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
-}
-.barra_lateral>ul>li{
-    margin: 0;
-    color: #1fa975;
-    cursor: pointer;
-    text-align: center;
-    
-}
-.barra_lateral>ul>li:nth-child(2){
-    padding: 450px 0 0;
-}
-.barra_lateral>ul>li:hover{
-  
-    padding: 10px;
+/* SECCIÓN IZQUIERDA */
+.presentacion {
+  width: 400px;  
+  padding: 40px;
+  text-align: left;
+  border-radius: 10px 0 0 10px;
+  margin-right:2em;
 }
 
 
-
-
-.barra_superior>h3:hover{
-    background-color: #1fa975;
-    color: white;
-    border-radius: 10px;
-    
+.presentacion h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
 }
 
-.cuerpo {
-    display: flex;
-    padding: 2rem;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
+img{
     position: relative;
-    margin: 50px
 }
 
-.cuerpo {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background: #a1b6aa;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    
+.btn {
+  display: inline-block;
+  margin: 10px 5px 0 0;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
 }
+
+.btn-principal {
+  background: #1dd186;
+  color: white;
+}
+
+.btn-principal:hover {
+  background: #078a33;
+}
+
+.btn-secundario {
+  background: #ddd;
+  color: #333;
+  border-radius: 20px;
+}
+
+.btn-secundario:hover {
+  background: #bbb;
+}
+
+/* SECCIÓN DERECHA */
 .formulario {
-    flex: 1;
-    padding: 2rem;
-    
+  position: relative;
+  width: 400px;  
+  padding: 40px;
+  background: #eee;
+  border-radius: 0 10px 10px 0;
+  text-align: left;
+  white-space: normal;
 }
-.imagen {
-    flex: 1;
-    padding: 2rem;
-    
+
+.formulario input:valid {
+  border-color: green;
+}
+
+
+
+
+
+.formulario h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #08ac3f;
+}
+
+.formulario label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.formulario input {
+  width: 95%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.formulario button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background: #09a054;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  background: aliceblue;
+}
+
+/* NAVEGACIÓN SUPERIOR */
+.topnav {
+  position: scroll;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  text-align: center;
+  line-height: 50px;
+  
+}
+
+.topnav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.topnav li {
+  display: inline-block;
+  margin: 0 120px;
+}
+
+.topnav a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  padding-left:7em ;
+}
+
+/* BARRA LATERAL */
+.leftnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 100%;
+  background-color: #01504d;
+  text-align: center;
+  z-index: 1;
+}
+
+.leftnav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.leftnav li {
+  margin: 30px 0;
+}
+
+.leftnav li.home {
+  margin-bottom: 400px;
+}
+
+.leftnav a {
+  display: inline-block;
+  width: 100%;
+}
+
+.leftnav i {
+  font-size: 25px;
+  color: #17e7a1;
 }

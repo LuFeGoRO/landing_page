@@ -1,113 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Dental</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-    <h2>Landing page Template</h2>
-    <main>
 
-        <header>
+  <!-- Barra lateral izquierda -->
+  <aside class="leftnav">
+    <ul>
+      <li class="home"><a href="#"><i class="fa-solid fa-house"></i></a></li>
+      <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+      <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+    </ul>
+  </aside>
 
-            <nav class="barra_lateral">
-                <ul>
-                    <li>
-                        <h3>C</h3>
-                    </li>
-                    <li>
-                        <h3>T</h3>
-                    </li>
-                    <li>
-                        <h3>F</h3>
-                    </li>
-                    <li>
-                        <h3>I</h3>
-                    </li>
-                    <li>
-                        <h3>Y</h3>
-                    </li>
+  <!-- Navegación superior -->
+  <header class="topnav">
+    <nav>
+      <ul>
+        <a href="#inicio">Home</a></li>
+        <a href="#servicios">Services</a>
+        <a href="#nosotros">About Us</a>
+        <a href="#cita">Appointment</a>
+        <a href="#contacto">Contact</a>
+        <a href="tel:+573001112233">📞 300 111 2233</a>
+      </ul>
+    </nav>
+  </header>
 
-                </ul>
+  <!-- Contenido principal -->
+  <main>
+    <section class="contenedor">
+      
+      <!-- Presentación -->
+       
+      <section class="presentacion" id="inicio">
+        <img src="logos/dent.png" alt="dent">
+        <h1>Bienvenido a <span>Clínica Dental</span></h1>
+        <p>Sonríe con confianza, cuidamos tu salud oral con los mejores profesionales.</p>
+        <a href="#cita" class="btn btn-principal">Book Now</a>
+        <a href="#servicios" class="btn btn-secundario">Read More</a>
+      </section>
 
-            </nav>
+      <!-- Formulario -->
+      <section class="formulario" id="cita">
+        <div><h2>Agenda tu cita</h2>
+        <form action="#" method="post">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required>
 
-            <div class="cabecera">
-                <nav class="barra_superior">
-                    <ul>
-                        <li>
-                            <h3>Home</h3>
-                        </li>
-                        <li>
-                            <h3>Servise </h3>
-                        </li>
-                        
-                        <li>
-                            <h3>Appointment</h3>
-                        </li>
-                        <li>
-                            <h3>Contac</h3>
-                        </li>
-                        <li>
-                            <h3>About us</h3>
-                        </li>
-                        <li>
-                            <h3>(+605) 1234-456789</h3>
-                        </li>
+          <label for="email">Correo</label>
+          <input type="email" id="email" name="email" required>
 
-                    </ul>
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" required>
 
-                </nav>
+          <label for="fecha">Fecha</label>
+          <input type="date" id="fecha" name="fecha" required>
 
+          <label for="hora">Hora</label>
+          <input type="time" id="hora" name="hora" required>
 
+          <button type="submit">Reservar</button>
+        </form></div>
+        
+      </section>
 
+    </section>
+  </main>
 
-            </div>
-
-
-        </header>
-
-        </nav>
-        <section class="cuerpo">
-            <div><div class="imagen">
-                    <img src="img.PNG" alt="">
-                </div></div>
-            <div class="formulario">
-                <form action="">
-                    <h1>Formulario</h1>
-                    <div class="form-group">
-                        <label for="Nombre">Nombre</label>
-                        <input type="text" id="Nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="apellido">Apellidos</label>
-                        <input type="text" id="apellido" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="correo">correo</label>
-                        <input type="email" id="correo" maxlength="20" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="Fecha">Fecha de nacimiento</label>
-                        <input type="date" id="documenti" required>
-
-                    </div>
-                    <div class="form-group">
-                        <label for="datos">Guardar datos
-                            <input type="checkbox" id="datos">
-
-                    </div>
-                    <button>Enviar</button>
-
-                </form>
-            </div>
-        </section>
-    </main>
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Clínica Dental. Todos los derechos reservados.</p>
+  </footer>
 
 </body>
-
 </html>
